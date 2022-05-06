@@ -1,0 +1,14 @@
+.modal-dialog {
+    position: fixed;
+    margin-top: 94px;
+    width: 320px;
+    height: 89%;
+    right: 0px;
+}
+.modal.fade .modal-dialog {
+    transform: translate(0,-6%);
+    transition: transform .3s ease-out;
+}
+.modal-content {
+    height: 100%;
+}

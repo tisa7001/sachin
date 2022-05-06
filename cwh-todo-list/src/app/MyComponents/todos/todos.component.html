@@ -1,0 +1,17 @@
+
+<div *ngFor=" let iteration of iterations" >
+    <!-- <button  style="border-radius:10px" (click)="OnclickAddbtn()"> Add Todo </button> -->
+    <button type="button" (click)="onclick(iteration)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">{{iteration.title}}</button>
+</div>
+<div >
+    
+    <app-todos-item-add  (todoAdd)="addTodo($event)"  [iteration]="iteration">
+    </app-todos-item-add>
+</div>
+
+<div *ngFor="let todo of todos" >
+    <app-todos-item [todo]="todo" (todoDelete)="deleteTodo($event)" >
+ </app-todos-item>
+</div>
+
+    
